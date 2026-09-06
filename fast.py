@@ -40,12 +40,12 @@ def professional_banner():
 
 
 STRIKE_MESSAGES = [
-    "[{target}] - 𝗥𝗨𝗡𝗗𝗬 𝗞𝗔 𝗕𝗔𝗔𝗖𝗛𝗔 _________   🤣 𓂃\n",
-    "[{target}] - 𝗥𝗨𝗡𝗗𝗬 𝗞𝗔 𝗕𝗔𝗔𝗖𝗛𝗔 _________   😂 𓂃\n",
-    "[{target}] - 𝗥𝗨𝗡𝗗𝗬 𝗞𝗔 𝗕𝗔𝗔𝗖𝗛𝗔 _________   🤮 𓂃\n",
-    "[{target}] - 𝗥𝗨𝗡𝗗𝗬 𝗞𝗔 𝗕𝗔𝗔𝗖𝗛𝗔 _________   🤑 𓂃\n",
-    "[{target}] - 𝗥𝗨𝗡𝗗𝗬 𝗞𝗔 𝗕𝗔𝗔𝗖𝗛𝗔 _________   🤢 𓂃\n",
-    "[{target}] - 𝗥𝗨𝗡𝗗𝗬 𝗞𝗔 𝗕𝗔𝗔𝗖𝗛𝗔 _________   🥵  𓂃\n",
+    "[{target}] - 𝗥𝗨𝗡𝗗𝗬 𝗞𝗔 𝗕𝗔𝗔𝗖𝗛𝗔 _________   🤣 𓂃\n\n",
+    "[{target}] - 𝗥𝗨𝗡𝗗𝗬 𝗞𝗔 𝗕𝗔𝗔𝗖𝗛𝗔 _________   😂 𓂃\n\n",
+    "[{target}] - 𝗥𝗨𝗡𝗗𝗬 𝗞𝗔 𝗕𝗔𝗔𝗖𝗛𝗔 _________   🤮 𓂃\n\n",
+    "[{target}] - 𝗥𝗨𝗡𝗗𝗬 𝗞𝗔 𝗕𝗔𝗔𝗖𝗛𝗔 _________   🤑 𓂃\n\n",
+    "[{target}] - 𝗥𝗨𝗡𝗗𝗬 𝗞𝗔 𝗕𝗔𝗔𝗖𝗛𝗔 _________   🤢 𓂃\n\n",
+    "[{target}] - 𝗥𝗨𝗡𝗗𝗬 𝗞𝗔 𝗕𝗔𝗔𝗖𝗛𝗔 _________   🥵  𓂃\n\n",
 
 ]
 
@@ -59,7 +59,7 @@ def countdown(seconds):
 def get_payload(opponent):
     gap_lines = "\n" * 1  
     core = random.choice(STRIKE_MESSAGES).replace("{target}", opponent)
-    return gap_lines.join([core] * 10) + "\n"
+    return gap_lines.join([core] * 15) + "\n"
 
 async def block_media(route):
     if route.request.resource_type in ["image", "media", "font"]:
